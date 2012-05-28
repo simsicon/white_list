@@ -7,6 +7,8 @@ you can comfortably add rules by domains, rather than run nslookup yourself.
 
 Install this app in any of your server installed ruby environment in autoddvpn routed internal network, then would work.
 
+The authentication system is not fully developed, get used to it.
+
 ```console
 bundle install
 rake db:migrate
