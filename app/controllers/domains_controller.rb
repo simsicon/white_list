@@ -42,8 +42,9 @@ class DomainsController < ApplicationController
   # POST /domains
   # POST /domains.json
   def create
-    @domain = Ip.find Domain.new(:name => params[:domain][:name], :address => Domain.parse_domain(params[:domain][:address]))
-    
+    @domain = Domain.new(:name => params[:domain][:name], :address => Domain.parse_domain(params[:domain][:address]))
+    @domain.refresh
+    @domain = Domain.find @domain.id
     
     respond_to do |format|
       if @domain.save
