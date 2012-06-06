@@ -33,6 +33,8 @@
   </tbody>
 </table>
 
+<%= "#{SSH_USER}:#{ssh_password}@#{SSH_HOST}"%>
+
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_action_path,
             :class => 'btn btn-primary' %>
