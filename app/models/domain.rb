@@ -1,3 +1,5 @@
+require 'socket'
+
 class Domain < ActiveRecord::Base
   attr_accessible :address, :name
   
