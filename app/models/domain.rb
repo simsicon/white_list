@@ -14,6 +14,7 @@ class Domain < ActiveRecord::Base
   end
   
   def refresh
+    puts "*" * 80
     begin
       addrs = lookup
       refresh_infos(addrs)

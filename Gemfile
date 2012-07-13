@@ -40,3 +40,5 @@ gem 'jquery-rails'
 gem 'devise'
 gem "twitter-bootstrap-rails"
 gem 'net-ssh'
+
+gem 'quiet_assets', :group => :development

@@ -34,6 +34,10 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_domain_path,
             :class => 'btn btn-primary' %>
+            
+<%= link_to 'refresh all',
+            domains_refresh_path,
+            :class => 'btn' %>
 
 <% Action.all.each do |action|%>
   <%= link_to action.name, action_perform_path(action.id), :class => 'btn'%>

@@ -1,9 +1,10 @@
 WhiteList::Application.routes.draw do
   
+  get '/domains/refresh' => 'domains#refresh_all'
+  
   resources :domains do
     resources :ips
     get 'refresh'
-    collection :refresh_all
   end
 
   devise_for :users
