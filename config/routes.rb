@@ -3,6 +3,7 @@ WhiteList::Application.routes.draw do
   resources :domains do
     resources :ips
     get 'refresh'
+    collection :refresh_all
   end
 
   devise_for :users
