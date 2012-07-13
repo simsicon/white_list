@@ -87,6 +87,13 @@ class DomainsController < ApplicationController
   def refresh
     @domain = Domain.find_by_id(params[:domain_id]).refresh
     @domain = Domain.find @domain.id
-    render 'show'
+    redirect_to @domain
+  end
+  
+  def refresh_all
+    @domain = Domain.all.each do |d|
+      d.refresh
+    end
+    redirect_to domains_path
   end
 end
